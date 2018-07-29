@@ -34,9 +34,9 @@ $('button#previous').on('click', function() {
     player.playPause(previousSong);
 });
 
-setIntervalVolume( () => {
-  const currentVolume = player.setVolume();
-  $('#volume-control input').val(percent);
-
+$('#volume-control input').on('input', function (event) {
+  player.setVolume(event.target.value);
 });
+
+
 }

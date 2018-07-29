@@ -33,4 +33,10 @@ $('button#previous').on('click', function() {
     const previousSong = album.songs[previousSongIndex];
     player.playPause(previousSong);
 });
+
+setIntervalVolume( () => {
+  const currentVolume = player.setVolume();
+  $('#volume-control input').val(percent);
+
+});
 }
